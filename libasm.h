@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _LIBASM_H
-# define _LIBASM_H
+#ifndef LIBASM_H
+# define LIBASM_H
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+
+# define STRLEN(x) printf("str=%s MINE: %d REAL: %d", x, (int)ft_strlen(x), (int)strlen(x));
 
 size_t	ft_strlen(const char *s);
 

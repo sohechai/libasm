@@ -16,9 +16,9 @@ OBJ			=	$(SRC:.s=.o)
 
 NAME		=	libasm.a
 
-HEADER		=	libasm.h
+HEADER		=	./libasm.h
 
-FLAGS		=	-f macho64
+FLAGS		=	-f elf64
 
 RM			=	rm -rf
 
@@ -33,7 +33,7 @@ $(NAME): $(OBJ) $(HEADER)
 	nasm $(FLAGS) $< -o $@
 
 $(TEST):
-	gcc -Wall -Werror -Wextra -I$(HEADER) main.c libasm.a -o $(TEST)
+	gcc -Wall -Werror -Wextra main.c libasm.a -o $(TEST)
 
 clean:
 	${RM} ${OBJ}

@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-size_t	ft_strlen(const char *s);
+#include "libasm.h"
 
 int		main(void)
 {
@@ -29,13 +24,8 @@ int		main(void)
 	// i = 0;
 	// while (i < 100)
 	// 	buffer[i++] = 0;
-	char *str;
 
-	str = "salut";
-
-	printf("_________FT STRLEN _________\n");
-	printf("`%s` = mine = [%zu] real = [%d]\n", str, ft_strlen(str), (int)strlen(str));
-	printf("###########################\n");
+	STRLEN("salut");
 
     return (0);
 }
