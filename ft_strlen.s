@@ -1,8 +1,8 @@
 section .text
-		global	ft_strlen
-ft_strlen:
+		global	_ft_strlen
+_ft_strlen:
 	xor rax,rax
-start:	
+start:
 	cmp BYTE [rdi + rax], 0	;index, 0
 	je	end					;go end si different de la cmp en haut
 	inc rax					;rax++
