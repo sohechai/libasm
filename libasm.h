@@ -6,7 +6,7 @@
 /*   By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:01:16 by sofiahechai       #+#    #+#             */
-/*   Updated: 2020/10/29 16:15:45 by sofiahechai      ###   ########lyon.fr   */
+/*   Updated: 2020/10/29 19:36:44 by sofiahechai      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@
 
 size_t	ft_strlen(const char *s);
 char	*ft_strcpy(char *dest, const char *src);
+int		ft_strcmp(const char *s1, const char *s2);
 
 #endif

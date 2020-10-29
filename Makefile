@@ -6,12 +6,13 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 23:44:37 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/10/29 15:39:36 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/10/29 19:39:23 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 SRC			=	ft_strlen.s \
 				ft_strcpy.s \
+				ft_strcmp.s
 
 OBJ			=	$(SRC:.s=.o)
 
@@ -27,7 +28,7 @@ RM			=	rm -rf
 
 TEST		=	test
 
-all: $(NAME)
+all: $(NAME) $(TEST)
 
 $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ)
