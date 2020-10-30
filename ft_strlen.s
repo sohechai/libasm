@@ -1,6 +1,6 @@
 section .text
-		global	_ft_strlen
-_ft_strlen:
+		global	ft_strlen
+ft_strlen:
 	xor rax,rax
 start:
 	cmp BYTE [rdi + rax], 0	;index, 0

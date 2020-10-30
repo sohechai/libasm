@@ -10,17 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _LIBASM_H
-# define _LIBASM_H
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
+#ifndef LIBASM_H
+# define LIBASM_H
+
 # include <stdio.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <errno.h>
+# include <unistd.h>
+# include <string.h>
 
-# define STRLEN(x) printf("str=[%s] MINE: %d | REAL: %d\n", x, (int)ft_strlen(x), (int)strlen(x));
-
+// int		ft_read(int fd, void *buf, int count);
+ssize_t ft_write(int fd, const void *buf, size_t count);  
 size_t	ft_strlen(const char *s);
-char	*ft_strcpy(char *dest, const char *src);
 int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strdup(const char *str);
 
 #endif

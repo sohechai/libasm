@@ -1,6 +1,6 @@
 section .text
-		global	_ft_strcmp
-_ft_strcmp:
+		global	ft_strcmp
+ft_strcmp:
 	mov rax, 0					;rax = 0
 start:
 	mov	al, BYTE[rdi]			;al = *dest

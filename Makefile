@@ -12,7 +12,9 @@
 
 SRC			=	ft_strlen.s \
 				ft_strcpy.s \
-				ft_strcmp.s
+				ft_strcmp.s \
+				ft_write.s	\
+				ft_strdup.s
 
 OBJ			=	$(SRC:.s=.o)
 
@@ -34,10 +36,10 @@ $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.s $(HEADER)
-	nasm $(FLAGMAC) $< -o $@
+	nasm $(FLAGS) $< -o $@
 
 $(TEST):
-	gcc -Wall -Werror -Wextra main.c libasm.a -o $(TEST)
+	clang -Wall -Werror -Wextra -o $(TEST) main.c libasm.a
 
 clean:
 	${RM} ${OBJ}
