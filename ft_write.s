@@ -2,7 +2,7 @@ global	ft_write
 section .text
 extern __errno_location
 ft_write:
-	mov		rax,1				; rax = 1
+	mov		rax, 1				; rax = 1
 	syscall						; system call
 	cmp		rax, 0				;cmp rax < 0
 	jl		error				; if rax < o -> error
