@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 23:44:37 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/10/29 19:39:23 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/11/21 16:11:39 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ HEADER		=	./libasm.h
 
 FLAGS		=	-f elf64
 
-FLAGMAC		=	-f macho64
+FLAGSMAC		=	-f macho64
 
 RM			=	rm -rf
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.s $(HEADER)
-	nasm $(FLAGS) $< -o $@
+	nasm $(FLAGSMAC) $< -o $@
 
 $(TEST):
 	clang -Wall -Werror -Wextra -o $(TEST) main.c libasm.a
