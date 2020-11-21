@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 23:44:37 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/11/21 16:11:39 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/11/21 16:21:13 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.s $(HEADER)
-	nasm $(FLAGSMAC) $< -o $@
+	nasm $(FLAGS) $< -o $@
 
 $(TEST):
 	clang -Wall -Werror -Wextra -o $(TEST) main.c libasm.a
