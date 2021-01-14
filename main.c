@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:51:51 by sofiahechai       #+#    #+#             */
-/*   Updated: 2020/11/23 01:43:04 by sofiahechai      ###   ########lyon.fr   */
+/*   Updated: 2021/01/13 04:13:18 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int		main(void)
 	printf("\033[0;33m----------ft_strcpy----------\n\033[00m");
 	printf("\nmine : %s\n", ft_strcpy(dst, "test"));
 	printf("real : %s\n\n", strcpy(dst, "test"));
+	printf("mine : %s\n", ft_strcpy(dst, "test123"));
+	printf("real : %s\n\n", strcpy(dst, "test123"));
 	printf("mine : %s\n", ft_strcpy(dst, ""));
 	printf("real : %s\n\n", strcpy(dst, ""));
 
@@ -43,12 +45,17 @@ int		main(void)
 	//printf("real : %s\n\n", strcpy(dst, "012345679azertyuiopqsdfghjklmwxcvbn"));
 
 	printf("\033[0;33m----------ft_strcmp----------\n\033[00m");
-	printf("\nmine : %d\n", ft_strcmp("test", "test"));
-	printf("real : %d\n\n", strcmp("test", "test"));
-	printf("mine : %d\n", ft_strcmp("test1", "test2"));
-	printf("real : %d\n\n", strcmp("test1", "test2"));
-	printf("mine : %d\n", ft_strcmp("test6", "test1"));
-	printf("real : %d\n\n", strcmp("test6", "test1"));
+	printf("\nmine : [%d]\n", ft_strcmp("test", "test"));
+	printf("real : [%d]\n\n", strcmp("test", "test"));
+
+	printf("\nmine : [:%d]\n", ft_strcmp("test", "testX"));
+	printf("real : [:%d]\n\n", strcmp("test", "testX"));
+
+	printf("mine : [%d]\n", ft_strcmp("test1", "test2"));
+	printf("real : [%d]\n\n", strcmp("test1", "test2"));
+	
+	printf("mine : [%d]\n", ft_strcmp("test6", "test1"));
+	printf("real : [%d]\n\n", strcmp("test6", "test1"));
 
 	printf("mine : [%d]\n", ft_strcmp("", ""));
 	printf("real : [%d]\n\n", strcmp("", ""));

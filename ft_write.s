@@ -5,7 +5,7 @@ ft_write:
 	mov		rax, 1				; rax = 1
 	syscall						; system call
 	cmp		rax, 0				;cmp rax < 0
-	jl		error				; if rax < o -> error
+	jl		error				; if rax < 0 -> error
 	ret							; return rax
 
 error:

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
+#    By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 23:44:37 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/12/09 01:14:02 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2021/01/12 17:25:04 by user42           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.s $(HEADER)
-	nasm $(FLAGSMAC) $< -o $@
+	nasm $(FLAGS) $< -o $@
 
 $(TEST):
 	clang -Wall -Werror -Wextra -o $(TEST) main.c libasm.a

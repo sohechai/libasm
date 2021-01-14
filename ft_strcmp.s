@@ -1,20 +1,26 @@
 section .text
-        global    ft_strcmp
+		global    ft_strcmp
 ft_strcmp:
-    mov rax, 0                    ;rax = 0
+	mov rax, 0			;rax = 0
 start:
-    mov    al, BYTE[rdi]            ;al = *dest
-    mov    bl, BYTE[rsi]            ;bl = *src
-    cmp    al, 0                    ;al ? '\0'
-    je    end                        ; = '\o' -> end
-    cmp    bl, 0                    ;bl ? '\0'
-    je    end                        ;= '\0' -> end
-    cmp    al, bl                    ;al ? bl
-    jne    end                        ; al != bl
-    inc    rdi                        ; *rdi ++
-    inc    rsi                        ; *rsi ++
-    jmp start                    ; loop
-
-end:
-    sub rax, rbx                ;rax - rbx = (ascii int that we obtain at the moment we decide to call end : 2 different char, or end of one string )
+	mov	cl, [rdi]            ;al = *dest
+    mov	dl, [rsi]            ;bl = *src
+    cmp	cl, dl                    ;al ? bl
+    jg	greater                        ; al != bl
+	jb	lower
+    inc	rdi                        ; *rdi ++
+    inc	rsi                        ; *rsi ++
+	cmp	cl, 0                    ;al ? '\0'
+    je	equal                        ; = '\o' -> end
+    cmp	dl, 0                    ;bl ? '\0'
+    je	equal                        ;= '\0' -> end
+    jmp	start                    ; loop
+greater:
+	mov rax, 1
+	ret
+lower:
+	mov rax, -1
+	ret
+equal:
+	mov rax, 0
     ret
